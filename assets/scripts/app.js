@@ -38,15 +38,16 @@ function getUserNumberInput()
 
 function calculateResult(calculationType)
 {
+    const eneteredNumber = getUserNumberInput();
     if(calculationType !== 'ADD' &&
        calculationType !== 'SUBTRACT' &&
        calculationType !== 'MULTIPLY' &&
-       calculationType !== 'DIVIDE')
+       calculationType !== 'DIVIDE' ||
+       !eneteredNumber)
     {
         return;
     }
 
-    const eneteredNumber = getUserNumberInput();
     const initialResult = currentResult;
     let mathOperator;
 
